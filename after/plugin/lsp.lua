@@ -53,6 +53,7 @@ require('mason-lspconfig').setup({
         'lua_ls',
         'rust_analyzer',
         'gopls',
+        'pyright',
     },
 })
 
@@ -84,6 +85,23 @@ require 'lspconfig'.lua_ls.setup {
     },
 }
 -- }}}
+
+--config python language server
+
+require 'lspconfig'.pyright.setup({
+    on_attach = on_attach_vim,
+    settings = {
+        pyright = {
+            autoImportCompletion = true,
+        },
+        python = {
+            analysis = {
+                autoSearchPaths = true,
+                useLibraryCodeForTypes = true,
+            }
+        }
+    }
+})
 
 -- GOPLS {{{
 require 'lspconfig'.gopls.setup {
