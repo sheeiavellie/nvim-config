@@ -103,6 +103,19 @@ require 'lspconfig'.pyright.setup({
     }
 })
 
+require('lspconfig')['yamlls'].setup {
+    on_attach = on_attach_vim,
+    settings = {
+        yaml = {
+            keyOrdering = false,
+            schemaStore = {
+                url = "https://www.schemastore.org/api/json/catalog.json",
+                enable = true,
+            }
+        }
+    }
+}
+
 -- GOPLS {{{
 require 'lspconfig'.gopls.setup {
     on_attach = on_attach_vim,
