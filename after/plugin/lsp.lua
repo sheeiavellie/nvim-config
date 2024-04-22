@@ -140,6 +140,13 @@ require 'lspconfig'.gopls.setup {
     },
 }
 
+require 'lspconfig'.rust_analyzer.setup {
+    on_attach = on_attach_vim,
+    cmd = {
+        "rustup", "run", "stable", "rust-analyzer",
+    },
+}
+
 local cmp = require('cmp')
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
 
