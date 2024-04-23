@@ -49,7 +49,6 @@ lsp_zero.on_attach(on_attach_vim)
 require('mason').setup({})
 require('mason-lspconfig').setup({
     ensure_inrtalled = {
-        'tsserver',
         'lua_ls',
         'rust_analyzer',
         'gopls',

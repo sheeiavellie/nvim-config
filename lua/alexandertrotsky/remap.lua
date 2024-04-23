@@ -1,5 +1,6 @@
 vim.g.mapleader = " "
-vim.api.nvim_set_option("clipboard", "unnamed")
+vim.api.nvim_set_option("clipboard", "")
+
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("n", "<leader>sv", vim.cmd.vs)
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
